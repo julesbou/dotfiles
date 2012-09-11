@@ -22,7 +22,7 @@ let mapleader = ","
 
 set autoread                      " Automatically read a file that has changed on disk
 
-set clipboard=unnamedplus         " Alias unnamed register to the + register, which is the X Window clipboard.
+"set clipboard=unnamedplus         " Alias unnamed register to the + register, which is the X Window clipboard.
 
 set history=2000                  " Sets how many lines of history VIM has to remember
 
@@ -54,8 +54,8 @@ set hlsearch                      " Highlight matches.
 set showmatch                     " Show matching char (like {})
 
 set wrap                          " Turn on line wrapping.
-set scrolloff=7                   " Show 7 lines of context around the cursor.
-set sidescrolloff=7
+set scrolloff=4                   " Show 7 lines of context around the cursor.
+set sidescrolloff=4
 
 set notitle                       " Do not set the terminal's title
 
@@ -82,9 +82,9 @@ set autoindent
 set smartindent
 
 " Configure tabstyle...
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " Not sure what this does
 set ttyfast
@@ -119,10 +119,10 @@ endfunction
 nmap <leader><tab> mz:execute TabToggle()<cr>'z
 
 " Use perl regex style
-nnoremap / /\v
-vnoremap / /\v
-nnoremap ? ?\v
-vnoremap ? ?\v
+"nnoremap / /\v
+"vnoremap / /\v
+"nnoremap ? ?\v
+"vnoremap ? ?\v
 
 " Execute external command
 nmap ! :!
@@ -305,7 +305,7 @@ inoremap <silent> <C-Y> <C-C>:let @z = @"<cr>mz
 function! s:VSetSearch()
   let temp = @@
   norm! gvy
-  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+  let @/ = substitute(escape(@@, '\'), '\n', '\\n', 'g')
   let @@ = temp
 endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<cr>//<cr><c-o>
@@ -359,11 +359,11 @@ let g:SuperTabCrMapping = 0
 let g:SuperTabDefaultCompletionType = "context"
 
 " Lusty juggler
-let g:LustyJugglerKeyboardLayout = "colemak"
-let g:LustyJugglerDefaultMappings = 0
-let g:LustyJugglerShowKeys = 0
-nmap <silent> <leader>md :LustyJugglePrevious<cr>
-nmap <silent> <leader>mt :LustyJuggler<cr>
+"let g:LustyJugglerKeyboardLayout = "colemak"
+"let g:LustyJugglerDefaultMappings = 0
+"let g:LustyJugglerShowKeys = 0
+"nmap <silent> <leader>md :LustyJugglePrevious<cr>
+"nmap <silent> <leader>mt :LustyJuggler<cr>
 
 " Lusty buffer
 "nmap <silent> <leader>mb :LustyBufferExplorer<cr>
@@ -478,7 +478,7 @@ let NERDTreeChDirMode=2
 let mapleader = ","
 let g:mapleader = ","
 
-map <leader>n :NERDTreeToggle<CR>
-map <leader>b :NERDTree .<CR>
-map <leader>& :tabp<CR>
-map <leader>é :tabn<CR>
+noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader>b :NERDTree .<CR>
+noremap <leader>& :tabp<CR>
+noremap <leader>é :tabn<CR>
