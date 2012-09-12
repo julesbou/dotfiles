@@ -9,6 +9,9 @@ fortune -a | cowsay
 DOTFILES=$HOME/my-dotfiles
 OHMYZSH=$DOTFILES/zsh/oh-my-zsh
 
+# Add npm registry to path
+export PATH=/usr/local/share/npm/bin:$PATH
+
 # Load all of the config files in oh-my-zsh that end in .zsh
 for config_file ($OHMYZSH/lib/*.zsh) source $config_file
 
