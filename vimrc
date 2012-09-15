@@ -483,3 +483,8 @@ noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>b :NERDTree .<CR>
 noremap <leader>& :tabp<CR>
 noremap <leader>é :tabn<CR>
+
+"" php-doc
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-P> :call PhpDocSingle()<CR> 
+vnoremap <C-P> :call PhpDocRange()<CR>
