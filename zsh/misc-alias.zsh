@@ -40,7 +40,11 @@ alias stop="sudo rc.d stop"
 alias im="weechat-curses"
 
 # radios are in ~/data/radio
-alias radio="mplayer -playlist"
+function radio() { mplayer -playlist ~/Music/playlists/$1/$1.txt }
+
+# music/playlists
+alias rplaylists='for dir in `ls ~/Music/playlists`;do f=~/Music/playlists/$dir && touch $f/$dir.txt && echo "" > $f/$dir.txt &&  ls -1 $f | grep ".mp3" > $f/$dir.txt; done'
+alias soundcloud="soundcloud.sh ~/Music/new"
 
 # Search using surfraw
 alias gg="surfraw google"
