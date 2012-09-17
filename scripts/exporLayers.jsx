@@ -435,8 +435,7 @@ function processDocument(currDoc){\
     fname = fname.substr(0,fname.lastIndexOf(\".\"));\
     fileName = \""+baseFilename+"\" == \""+fileNameConst+"\" ? fname : \""+baseFilename+"\";\
     while (len--){\
-        \
-           //if layer isn't locked\
+        //if layer isn't locked\
         var thisLayer = doc.layers[len];\
         if(thisLayer.locked == false){\
             hideAllUnlocked();\
@@ -445,8 +444,7 @@ function processDocument(currDoc){\
 \
 \
             var suffix =  "+layerNameBool+" ? thisLayer.name:len;\
-            switch(\""+exportFileType+"\")\
-            {\
+            switch(\""+exportFileType+"\") {\
                 case \"JPG\":\
                     exportJPG(suffix);\
                     break;\
@@ -458,12 +456,16 @@ function processDocument(currDoc){\
                     break;\
                 default:\
                     break;\
-                \
             }\
-            \
-            }\
-       }\
+        }\
+    }\
+\
+    // finally show all layers\
+    for (var i = 0; i < doc.layers.length; i++) {\
+        doc.layers[i].visible = true\
+    }\
 }\
+\
 function hideAllUnlocked(){\
     var all = doc.layers.length;\
     while(all--){\
