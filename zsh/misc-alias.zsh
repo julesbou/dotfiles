@@ -26,11 +26,11 @@ alias phpunituntil="phpunit --stop-on-failure --stop-on-error"
 alias reload=". ~/.zshrc"
 
 # Start web server
-alias startwebserver="sudo nginx && sudo mongod &"
+alias startwebserver="sudo nginx && sudo mongod && php-fpm & "
 # Stop web server
-alias stopwebserver="sudo nginx -s stop && sudo pkill mongod"
+alias stopwebserver="sudo nginx -s stop && sudo pkill mongod && pkill php-fpm"
 # Restart web server
-alias restartwebserver="sudo nginx -s reload && sudo pkill mongod && sudo mongod  &"
+alias restartwebserver="sudo nginx -s reload &; sudo pkill mongod; sudo mongod &; pkill php-fpm; php-fpm &"
 
 alias start="sudo rc.d start"
 alias restart="sudo rc.d restart"
