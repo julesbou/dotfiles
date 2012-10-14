@@ -64,6 +64,9 @@ alias ya='yaourt'
 # Generate haskell tags
 alias htags='find ./ -name "*.*hs" | xargs hasktags'
 
+# Better process kilalias pk='ps -ef | grep PROCESS | grep -v grep | awk '{print $2}' | xargs kill -9'
+function pk() { ps -ef | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9 }
+
 # Translations
 alias trans=google-translate
 alias enfr="google-translate en fr "
