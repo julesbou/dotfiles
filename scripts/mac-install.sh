@@ -1,5 +1,5 @@
 echo 'Save screenshots to Pictures folder';
-defaults write com.apple.screencapture location "/Users/$(whoami)/Pictures/screenshot"
+defaults write com.apple.screencapture location "/Users/$(whoami)/Destkop"
 
 echo 'disable dashboard';
 defaults write com.apple.dashboard mcx-disabled -boolean YES
