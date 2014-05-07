@@ -488,3 +488,9 @@ noremap <leader>é :tabn<CR>
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-P> :call PhpDocSingle()<CR> 
 vnoremap <C-P> :call PhpDocRange()<CR>
+
+autocmd BufWritePre * :call <SID>StripWhite()
+fun! <SID>StripWhite()
+  %s/[ \t]\+$//ge
+  %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
+endfun
