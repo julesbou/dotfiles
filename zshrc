@@ -1,40 +1,26 @@
-#!/usr/bin/env zsh
-#
-# This is my main zsh configuration.
-# It loads scripts from zsh/ and oh-my-zsh/
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+DOTFILES=$HOME/.dotfiles
 
 # First of all, feature a chatty cow
 fortune -a | cowsay
 
-DOTFILES=$HOME/my-dotfiles
-OHMYZSH=$DOTFILES/zsh/oh-my-zsh
 
-# Add npm registry to path
-export PATH=/usr/local/share/npm/bin:$PATH
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+ZSH_THEME="blinks"
 
-# Add homebrew to path
-export PATH=/usr/local/sbin:$PATH
+# Aliases
+alias browser="open /Applications/Chromium.app"
 
-# Load all of the config files in oh-my-zsh that end in .zsh
-for config_file ($OHMYZSH/lib/*.zsh) source $config_file
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
 
-# Load chosen oh-my-zsh plugins
-for plugin in archlinux extract; do
-    source $OHMYZSH/plugins/$plugin/$plugin.plugin.zsh
-done
+source $ZSH/oh-my-zsh.sh
 
-# Load all of my zsh files in zsh/
-for zsh_file ($DOTFILES/zsh/*.zsh) source $zsh_file
+# User configuration
 
-# Add fish-like syntax highlighting (must be done before substring search!)
-source $DOTFILES/zsh/syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Add history substring search
-source $OHMYZSH/plugins/history-substring-search/history-substring-search.zsh
-
-# Enable completion after all plugins are loaded
-autoload -U compinit
-compinit -i
-
-# Load private configuration
-[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
