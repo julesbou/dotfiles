@@ -45,6 +45,7 @@ set wildmode=list:longest         " Complete files like a shell.
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.pyo,**/cache/**,**/logs/**,**/zend/**,**/bootstrap.*,**/vendor/**/vendor/**,web/css,web/js,web/bundles,*/project/*,*/target/*,*.hi,tags
 
 set number                        " Show line numbers.
+"set nowrap
 set ruler                         " Show cursor position.
 
 set ignorecase                    " Case-insensitive searching.
@@ -69,12 +70,13 @@ set noswapfile                    " Use an SCM instead of swap files
 
 set laststatus=2                   " Show the status line all the time
 " set statusline=%{substitute(getcwd(),'^.*/','','')}\ [%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}%=%-16(\ %l,%c-%v\ %)%P
-set statusline=%<%f\    " Filename
-set statusline+=%w%h%m%r " Options
+
+set statusline=%=%<%{'◸---\ '}%f\    " Filename
+" set statusline+=%w%h%m%r " Options
 " set statusline+=%{fugitive#statusline()} "  Git Hotness
-set statusline+=\ [%{&ff}/%Y]            " filetype
-set statusline+=\ [%{getcwd()}]          " current dir
-set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+" set statusline+=\ [%{&ff}/%Y]            " filetype
+" set statusline+=\ [%{getcwd()}]          " current dir
+" set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 
 " Tabs and indentation.
 set expandtab
@@ -170,12 +172,9 @@ set nofoldenable
 noremap H ^
 noremap L $
 
-" Toggle line numbering
-set nonumber
 nnoremap <silent> <leader>nn :set nonumber!<cr>
 
 " Toggle nowrap
-set nowrap
 nnoremap <silent> <leader>nw :set nowrap!<cr>
 
 " Close other windows
@@ -485,8 +484,8 @@ noremap <leader>& :tabp<CR>
 noremap <leader>é :tabn<CR>
 
 "" php-doc
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
 
 autocmd BufWritePre * :call <SID>StripWhite()
