@@ -49,11 +49,13 @@
   mnemonicprefix = true
 
 [alias]
-  ci              = commit
-  co              = checkout
-  cp              = cherry-pick
-  br              = branch
-  st              = status
+  ci = commit
+  ps = push
+  pl = pull
+  co = checkout
+  cp = cherry-pick
+  br = branch
+  st = status
 
   # nice logs
   l = log --decorate --graph --date=short --pretty=\"format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C()%s %C(black) [%an]%Creset\"
