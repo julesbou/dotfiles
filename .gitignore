@@ -1,1 +1,9 @@
+.DS_STORE
+.DS_Store
+*.gignore
+
 /vim/bundle/
+
+npm-debug.log
+node_modules/
+.sass-cache/
