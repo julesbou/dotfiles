@@ -6,3 +6,5 @@ alias vi="vim"
 alias vim='/usr/local/Cellar/vim/7.4.1525/bin/vim'
 
 alias nlog='tail -f /usr/local/etc/nginx/logs/*'
+
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
