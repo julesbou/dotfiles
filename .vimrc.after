@@ -14,3 +14,12 @@ au FocusLost,WinLeave * :silent! wa
 
 " Trigger autoread when changing buffers or coming back to vim.
 au FocusGained,BufEnter * :silent! !
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
+
+" Configure Syntastic to use ESLint
+let g:syntastic_javascript_checkers = ['eslint']
+
+" HTML5 tag support (brew install tidy-html5)
+let g:syntastic_html_tidy_exec = '/usr/local/Cellar/tidy-html5/5.1.25'
