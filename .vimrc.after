@@ -2,11 +2,11 @@ nmap <C-n> :NERDTreeToggle<CR>
 map <C-f> :NERDTreeFind<cr>
 
 " map TAB to exit insert mode
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>`
+"nnoremap <Tab> <Esc>
+"vnoremap <Tab> <Esc>gV
+"onoremap <Tab> <Esc>
+"inoremap <Tab> <Esc>`^
+"inoremap <Leader><Tab> <Tab>`
 
 " open NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
