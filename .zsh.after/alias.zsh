@@ -8,3 +8,17 @@ alias vim='/usr/local/Cellar/vim/7.4.1525/bin/vim'
 alias nlog='tail -f /usr/local/etc/nginx/logs/*'
 
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+alias l='ls -Alh'
+alias ll='ls -lh'
+alias la='ls -a'    # show hidden files
+alias lx='ls -lXB'  # sort by extension
+alias lk='ls -lSr'  # sort by size, biggest last
+alias lt='ls -ltr'  # last updated last
+
+alias df='df -h'
+alias du='du -h'
+
+alias mkdir='mkdir -p'
+alias h='history'
+alias grep='grep --color=auto'
