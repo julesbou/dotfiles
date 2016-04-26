@@ -22,3 +22,6 @@ alias du='du -h'
 alias mkdir='mkdir -p'
 alias h='history'
 alias grep='grep --color=auto'
+
+alias fr='trans -brief :fr'
+alias eng='trans -brief :eng'
