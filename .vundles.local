@@ -1,0 +1,2 @@
+Bundle "https://github.com/ap/vim-css-color"
+Bundle "https://github.com/editorconfig/editorconfig-vim"
