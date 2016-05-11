@@ -29,3 +29,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " HTML5 tag support (brew install tidy-html5)
 let g:syntastic_html_tidy_exec = '/usr/local/Cellar/tidy-html5/5.1.25'
+
+" Suppress experimental decorators warnings with typescript
+let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
