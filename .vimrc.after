@@ -31,4 +31,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_tidy_exec = '/usr/local/Cellar/tidy-html5/5.1.25'
 
 " Suppress experimental decorators warnings with typescript
-let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
+let g:syntastic_typescript_tsc_args = "--experimentalDecorators --target es5"
+
+" height of the location lists that syntastic
+let g:syntastic_loc_list_height = 3
