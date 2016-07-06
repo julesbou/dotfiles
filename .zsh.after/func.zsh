@@ -21,3 +21,7 @@ dico() {
 git_clean_branches() {
   git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d
 }
+
+url_size() {
+  curl $1 --silent --write-out '%{size_download}\n' --output /dev/null
+}
