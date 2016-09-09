@@ -3,3 +3,5 @@
   email = jules.bous@gmail.com
 [push]
   default = current
+[core]
+  excludesfile = ~/.gitignore
