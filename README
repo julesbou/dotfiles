@@ -1,0 +1,4 @@
+Install Vundles:
+
+$ ln -s ~/.dotfiles/.vundles.local ~/.yadr/vim/.vundles.local
+$ vi # then execute :PluginInstall
