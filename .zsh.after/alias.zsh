@@ -5,6 +5,10 @@ alias vi="vim"
 # - we dont want to alter PATH order for that
 alias vim='/usr/local/Cellar/vim/7.4.488/bin/vim'
 
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
+alias safari='/Applications/Safari.app/Contents/MacOS/Safari'
+
 alias nlog='tail -f /usr/local/etc/nginx/logs/*'
 
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
