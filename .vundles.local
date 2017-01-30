@@ -1,2 +1,3 @@
 Bundle "https://github.com/ap/vim-css-color"
 Bundle "https://github.com/editorconfig/editorconfig-vim"
+Bundle "https://github.com/posva/vim-vue"
