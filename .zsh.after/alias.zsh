@@ -29,3 +29,7 @@ alias grep='grep --color=auto'
 
 alias fr='trans -brief :fr'
 alias eng='trans -brief :eng'
+
+# https://stackoverflow.com/a/18019221/505836
+alias msgcat='/usr/local/opt/gettext/bin/msgcat'
+alias msgfmt='/usr/local/opt/gettext/bin/msgfmt'
