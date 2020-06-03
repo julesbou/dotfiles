@@ -25,3 +25,7 @@ git_clean_branches() {
 url_size() {
   curl $1 --silent --write-out '%{size_download}\n' --output /dev/null
 }
+
+invisible_spaces() {
+  grep -r $'\xc2\xa0' $1
+}

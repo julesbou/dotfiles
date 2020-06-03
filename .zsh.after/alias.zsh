@@ -3,7 +3,7 @@ alias vi="vim"
 # dirty override of default vim because
 # - we can't remove/update default vim
 # - we dont want to alter PATH order for that
-alias vim='/usr/local/Cellar/vim/8.0.0271/bin/vim'
+alias vim='/usr/local/Cellar/vim/8.2.0800/bin/vim'
 
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
@@ -22,6 +22,8 @@ alias lt='ls -ltr'  # last updated last
 
 alias df='df -h'
 alias du='du -h'
+
+alias gi='git'
 
 alias mkdir='mkdir -p'
 alias h='history'
